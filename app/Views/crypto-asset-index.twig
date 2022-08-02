@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crypto asset</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #3BACB6;
+            color: #31756f;
+            font-size: 15px;
+        }
+        #property-names {
+            background-color: white;
+            width: 450px;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .properties1 {
+            background-color: #B3E8E5;
+            padding: 20px;
+
+        }
+        .properties1:hover {
+            opacity: 0.8;
+        }
+
+        div {
+            background-color: white;
+            width: auto;
+            border-radius: 10px;
+            display: flex;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+<table>
+
+    <tr>
+        <td id="property-names">Name</td>
+        <td id="property-names">Symbol</td>
+        <td id="property-names">Price</td>
+    </tr>
+
+
+    {% for asset in assets %}
+<span class="zoom">
+        <tr>
+            <td class="properties1">
+        {{ asset.name }}
+            </td>
+        <td class="properties1">
+            {{ asset.symbol }}
+        </td>
+        <td class="properties1">
+            {{ asset.price }}
+        </td>
+        </tr>
+    </span>
+
+    {% endfor %}
+
+</table>
+</div>
+
+</body>
+</html>
